@@ -108,18 +108,4 @@ class Configuration implements ConfigurationInterface
 
         return $subTree;
     }
-
-    private function getTranslationConfiguration()
-    {
-        $subTreeBuilder = new TreeBuilder();
-        $subTree = $subTreeBuilder->root('translation');
-
-        $subTree
-            ->children()
-                ->scalarNode('class')
-                    ->defaultValue('')
-                ->end()
-            ->end()
-        ;
-    }
 }
